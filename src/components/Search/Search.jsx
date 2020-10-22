@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Search.css';
 
 const Search = ({
 
@@ -9,7 +10,7 @@ const Search = ({
 
   }) => (
 
-  <form onSubmit={onSubmit}>
+  <form onSubmit={onSubmit} className={styles.Search}>
     <label htmlFor="text"><h2>Search News By Keyword</h2></label>
     <input
       id="text"

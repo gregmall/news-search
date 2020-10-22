@@ -4,7 +4,9 @@ exports[`Articles component renders Article 1`] = `
 <DocumentFragment>
   <ul>
      
-    <li>
+    <li
+      class="Articles"
+    >
       <h2>
         Test Article
       </h2>

@@ -1,0 +1,21 @@
+.Search {
+  h2{
+    font-family: 'Times New Roman', Times, serif;
+  
+  }
+  
+  button {
+    background-color: aqua;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px;
+    margin: 4px;
+  
+  }
+  
+  input{
+    margin: 5px;
+    padding: 5px;
+  }
+
+
+}
