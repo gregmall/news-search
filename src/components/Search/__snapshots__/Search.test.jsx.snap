@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Controls component renders Controls 1`] = `
+<DocumentFragment>
+  <form>
+    <label
+      for="text"
+    >
+      <h2>
+        Search News By Keyword
+      </h2>
+    </label>
+    <input
+      id="text"
+      name="text"
+      type="text"
+      value="Test Display"
+    />
+    <br />
+    <button
+      type="submit"
+    >
+      SEARCH NEWS
+    </button>
+  </form>
+</DocumentFragment>
+`;
