@@ -9,7 +9,7 @@ import searchNews from '../components/services/news-search'
 
 export default class NewsSearch extends Component {
   state = {
-    loading: true,
+    loading: false,
     text: '',
     articles: []
 
@@ -20,28 +20,33 @@ export default class NewsSearch extends Component {
   }
   handleSubmit = async (e) => {
     e.preventDefault();
+    this.setState({loading: true})
     searchNews(this.state.text)
-    .then(articles => this.setState({articles, loading: false}));
+    .then(articles => this.setState({articles}))
+    .then(setTimeout(() => {
+      this.setState({ loading: false});
+    }, 2000));
 
   }
 
 render() {
   const { text, articles, loading} = this.state;
+  if(loading) return <Loading/>
 
-  
-return (
+  return (
 
 <div>
+  
 <Search
   text = {text}
   onChange={this.handleChange}
   onSubmit={this.handleSubmit}
 />
-{loading ? <Loading/> : 
+
    
 <Articles 
   articles ={articles}
-  />}
+  />
 
 
 </div>
