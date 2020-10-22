@@ -4,7 +4,7 @@ const Articles = ({articles}) =>{
   
   const articlesElements = articles.map(article => (
 
-    <li key={article.source.id}>
+    <li key={article.name}>
        <h2>{article.title}</h2>
        <h4>{article.author}</h4>
        <p>{article.description}</p>
