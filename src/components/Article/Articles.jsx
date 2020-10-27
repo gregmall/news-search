@@ -1,26 +1,30 @@
 import React from 'react';
+import Article from './Article';
+import styles from './Articles.css';
+import PropTypes from 'prop-types';
 
 
-const Articles = ({articles}) =>{
-  
+function Articles({ articles }) {
+
   const articlesElements = articles.map(article => (
-    <li key={article.title}>
-     
-      <span>Author: {article.author}</span><br/>
-      <span>Title: {article.title}</span><br/>
-      <span>Description: {article.description}</span><br/>
-      <span><a href={article.url} target="blank">{article.url}</a></span><br/>
-      
+
+    <li key={article.name} className={styles.Articles}>
+      <Article {...article}/>
     </li>
 
   ));
-  return <ul> {articlesElements} </ul>
-  
-  
+
+  return <ul data-testid="articles"> {articlesElements} </ul>;
 }
+
+Articles.propTypes = {
+  articles: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired
+  })).isRequired
+};
+
+
 export default Articles;
-
-
-
-
-
