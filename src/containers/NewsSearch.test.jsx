@@ -1,7 +1,7 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import NewsSearch from './NewsSearch';
-import { searchNews } from '../services/news-search';
+import  searchNews  from '../services/news-search';
 
 jest.mock('../services/news-search');
 
@@ -28,9 +28,9 @@ describe('NewsSearch container', () => {
       }
     ]);
     render(<NewsSearch />);
-    const button = screen.getByTestId('submit')
-    await fireEvent.click('button')
+   
     const articlesList = await screen.findByTestId('articles');
+    
     expect(articlesList).not.toBeEmptyDOMElement()
 
   });
