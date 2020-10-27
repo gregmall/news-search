@@ -18,7 +18,7 @@ const Search = ({
       onChange={onChange}
    />
     <br />
-      <button type="submit">SEARCH NEWS</button>
+      <button data-testid="submit" type="submit">SEARCH NEWS</button>
   </form>
   
 );

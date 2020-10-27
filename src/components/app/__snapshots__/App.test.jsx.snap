@@ -21,12 +21,15 @@ exports[`App component renders App 1`] = `
       />
       <br />
       <button
+        data-testid="submit"
         type="submit"
       >
         SEARCH NEWS
       </button>
     </form>
-    <ul>
+    <ul
+      data-testid="articles"
+    >
         
     </ul>
   </div>

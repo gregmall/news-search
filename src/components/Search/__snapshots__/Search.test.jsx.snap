@@ -20,6 +20,7 @@ exports[`Controls component renders Controls 1`] = `
     />
     <br />
     <button
+      data-testid="submit"
       type="submit"
     >
       SEARCH NEWS
